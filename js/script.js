@@ -1,16 +1,15 @@
-const turnLampOff = document.querySelector(`Lamp-off`)
-const turnLampOn = document.querySelector(`Lamp-on`)
-const btnOnOff = document.querySelector(`btn`)
+const turnLampOff = document.getElementById(`lamp-off`)
+const turnLampOn = document.getElementById(`lamp-on`)
+const btnOnOff = document.getElementById(`btn`)
 // creo una funzione che fa accendere/spegnere la lampada cliccando un bottone
 btnOnOff.addEventListener('click', function() {
-    if (turnLampOff.classList.contains('hidden') {
-        turnLampOff.classList.remove('hidden')
-        turnLampOn.classList.add('hidden'))
+    if (turnLampOn.classList.contains(`hidden`)) {
+        turnLampOn.classList.remove(`hidden`)
+        turnLampOff.classList.add(`hidden`)
+        btnOnOff.textContent = `SPEGNI`;
         } else {
-        turnLampOff.classList.add('hidden ')
-        turnLampOn.classList.remove('hidden ')
-        
+            turnLampOff.classList.remove(`hidden`)
+            turnLampOn.classList.add(`hidden`)
+            btnOnOff.textContent = `ACCENDI`;
         }
-        
-        })
-        
+     })
